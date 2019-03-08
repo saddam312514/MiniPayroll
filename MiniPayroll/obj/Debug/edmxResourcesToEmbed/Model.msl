@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="miniPayrollModelStoreContainer" CdmEntityContainer="miniPayrollEntities">
+    <EntitySetMapping Name="EmpAttendances">
+      <EntityTypeMapping TypeName="miniPayrollModel.EmpAttendance">
+        <MappingFragment StoreEntitySet="EmpAttendance">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="TotalDays" ColumnName="TotalDays" />
+          <ScalarProperty Name="WorkingDays" ColumnName="WorkingDays" />
+          <ScalarProperty Name="PresentDays" ColumnName="PresentDays" />
+          <ScalarProperty Name="AbsentDays" ColumnName="AbsentDays" />
+          <ScalarProperty Name="LopDays" ColumnName="LopDays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

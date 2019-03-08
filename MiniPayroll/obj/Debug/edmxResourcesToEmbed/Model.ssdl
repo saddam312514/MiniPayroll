@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="miniPayrollModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MiniPayroll.dbo.EmpAttendance' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmpAttendance">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="50" />
+    <Property Name="Month" Type="varchar" MaxLength="50" />
+    <Property Name="TotalDays" Type="float" />
+    <Property Name="WorkingDays" Type="float" />
+    <Property Name="PresentDays" Type="float" />
+    <Property Name="AbsentDays" Type="float" />
+    <Property Name="LopDays" Type="float" />
+  </EntityType>
+  <EntityContainer Name="miniPayrollModelStoreContainer">
+    <EntitySet Name="EmpAttendance" EntityType="Self.EmpAttendance" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EmpAttendance].[EmpId] AS [EmpId], 
+    [EmpAttendance].[Year] AS [Year], 
+    [EmpAttendance].[Month] AS [Month], 
+    [EmpAttendance].[TotalDays] AS [TotalDays], 
+    [EmpAttendance].[WorkingDays] AS [WorkingDays], 
+    [EmpAttendance].[PresentDays] AS [PresentDays], 
+    [EmpAttendance].[AbsentDays] AS [AbsentDays], 
+    [EmpAttendance].[LopDays] AS [LopDays]
+    FROM [dbo].[EmpAttendance] AS [EmpAttendance]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
